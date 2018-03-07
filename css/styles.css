@@ -1,0 +1,293 @@
+/* Global Style 
+---------------------------------*/
+
+/* defects */
+
+/*
+    Top of image disappears on hover 
+    Collage is not aliging to header and footer 
+    Tool tip not coming on hover 
+    Title - 40 above below -- while image -- 20 
+
+*/
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+}
+
+*.* {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+
+}
+
+/* variables */
+
+:root {
+    --main-head-color: white;
+    --main-text-color: black;
+    --margin-all: 20px;
+}
+
+
+@font-face {
+    font-family: "House Broken Rough";
+    src: url("../fonts/HouseBrokenRough.ttf");
+}
+
+@font-face {
+    font-family: "House Broken Clean";
+    src: url("../fonts/HouseBroken Clean.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "American Typewriter";
+    src: url("../fonts/AmericanTypewriter.ttf");
+}
+
+body {
+    font-family: 'House Broken Clean', cursive;
+    margin: 0;
+    background-image: url(../images/BG_Art/pexels-photo-242236.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+main {
+    padding-top: 130px;
+    /*90px is for header + 40px for padding */
+    /*    border: 1px green solid;*/
+}
+
+header h1,
+header h2 {
+    font-family: 'House Broken Rough';
+    margin: 0;
+    color: var(--main-head-color);
+
+}
+
+h1 {
+    margin: 0;
+}
+
+p,
+h2,
+h3,
+h4 {
+    font-family: 'American Typewriter';
+    margin: 0;
+    color: var(--main-text-color);
+
+}
+
+
+/* Navigation */
+
+header {
+    /*    padding-top: 50px;*/
+    padding: 50px 0 0 0;
+    position: relative;
+}
+
+nav {
+    background: url(../images/00_SRC/CutAndPastedBg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    /*    font-size: 20px;*/
+    text-align: center;
+    color: var(--main-head-color);
+    box-shadow: 0px 0px 2px black;
+
+
+}
+
+header a,
+footer a {
+    text-decoration: none;
+    color: var(--main-head-color);
+
+}
+
+main a {
+    text-decoration: none;
+    color: var(--main-text-color);
+
+}
+
+
+.logo {
+    font-family: 'House Broken Rough', cursive;
+    font-size: 4.1em;
+    /*    margin-top: 10px;*/
+    margin: 10px 0 0 0;
+    /*    margin: 20px;*/
+    word-spacing: -0.4em;
+    /*    border: 1px black solid;*/
+    font-weight: 100;
+
+}
+
+.menu {
+    margin: 20px;
+    font-size: 1.5em;
+    /*    font-weight: 30;*/
+    font-weight: 100;
+    text-transform: lowercase;
+    /*    font-variant: small-caps;*/
+}
+
+
+.selected {
+    position: relative;
+    white-space: nowrap;
+}
+
+.selected:after {
+    border-top: 3px solid var(--main-head-color);
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 38%;
+    left: 0;
+}
+
+
+.selectedblk {
+    position: relative;
+    white-space: nowrap;
+}
+
+.selectedblk:after {
+    border-top: 3px solid var(--main-text-color);
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 38%;
+    left: 0;
+}
+
+
+
+.main_heading {
+    font-family: 'House Broken Clean';
+    /*    font-size: 22px;*/
+    font-size: 2em;
+    font-weight: 100;
+    color: black;
+    word-spacing: -0.2em;
+    padding: 0px 0 40px 0;
+    /*    border: 1px black solid;*/
+}
+
+/*
+.flex-container-main {
+    display: flex;
+    flex-direction: column;
+
+}
+*/
+
+/*
+.marginall {
+    padding: 15px 20px;
+}*/
+
+.content-wrap {
+    /*    max-width: 984px;*/
+    max-width: 1024px;
+    /* 4 Img width + 3 padding */
+    margin: 0 auto;
+    /*        padding: 0 20px 20px;*/
+    /*    overflow: hidden;*/
+    /*    border: 1px solid red;*/
+}
+
+.artist-img {
+    -webkit-filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, .2));
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, .2));
+    float: left;
+    overflow: hidden;
+}
+
+.artist-img-main {
+    -webkit-filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, .2));
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, .2));
+    float: left;
+    overflow: hidden;
+}
+
+
+.col-wide-img h2 {
+    font-weight: 200;
+}
+
+.heavy {
+    /*    font-weight: 1000;*/
+    font-weight: 1000;
+    /*    background-color: black;*/
+    /*    color: white;*/
+    /*    font-style: oblique;*/
+}
+
+
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+
+
+/* Media Queries
+-------------------------*/
+
+@media (min-width: 900px) {
+    .col-narrow {
+        width: 30%;
+        float: left;
+        padding-left: 10px;
+    }
+    .col-wide {
+        max-width: 500px;
+        float: left;
+        padding-left: 20px;
+    }
+
+    .artist-img {
+        max-height: 506px;
+        max-width: 697px;
+    }
+
+
+}
+
+@media (max-width: 899px) {
+
+    .artist-img {
+        max-height: 506px;
+        max-width: 697px;
+    }
+
+}
